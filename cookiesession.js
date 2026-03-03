@@ -5,7 +5,8 @@ let app = express()
 
 app.use(cookieSession({
     name: 'mynewsession',
-    keys: ['key1', 'key2']
+    keys: ['key1', 'key2'],
+    maxAge: 60000
 }))
 
 app.get('/login',(req,res) => {
@@ -14,8 +15,11 @@ app.get('/login',(req,res) => {
 })
 
 app.get('/dashboard',(req,res) => {
-    res.send(`
-        <h1>Welcome ${req.session.username}</h1>
-        <a href="/logout">Logout</a>
-    `)
+    if (req.session.username) {
+        res.send(`Welcome ${req.session.username}. This is your dashboard`)
+    } else {
+        res.send('You are not logged in')
+    }
 })
+
+app.listen(3000)

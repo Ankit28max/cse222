@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { start } from 'repl';
+
 
 let readStream = fs.createReadStream('test.txt','utf-8');
 

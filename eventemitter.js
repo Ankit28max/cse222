@@ -1,4 +1,6 @@
 import {EventEmitter} from 'events'
+//const EventEmitter = require('events');
+
 const booking = new EventEmitter();
 
 booking.on("newbooking", (user)=>{

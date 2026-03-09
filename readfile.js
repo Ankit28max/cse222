@@ -9,7 +9,7 @@
 //     }
 // })
 
-// console.log('hello');
+console.log('hello');
 
 import fs from 'fs'
 

@@ -1,6 +1,6 @@
 import fs, { read, Utf8Stream } from 'fs'
 
-let writeStream = fs.createWriteStream('test.txt', {encoding: 'utf-8'});
+let writeStream = fs.createWriteStream('test.txt', 'utf-8');
 
 writeStream.write("This is the first line.\n");
 writeStream.write("This is the second line.\n");

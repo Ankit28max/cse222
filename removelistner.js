@@ -12,6 +12,5 @@ setInterval(() => {
 
 setTimeout(() => {
     myEmitter.removeListener("myEvent", myListner)
-    console.log("listner removed");
-    
+    console.log("listner removed");  
 }, 10000);

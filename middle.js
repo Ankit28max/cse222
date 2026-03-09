@@ -2,14 +2,14 @@ import express from 'express'
 let app = express();
 
 let logger = (req,res,next) => {
-    next();
-    console.log('Before Logging');
+    //console.log('Before Logging');
     console.log('After Logging');
+    next();
 }
 
-app.use(logger);
+//app.use(logger);
 
-app.get('/home',(req,res)=>{
+app.get('/home',logger,(req,res)=>{
     console.log("This is home page");
     res.send()
 })

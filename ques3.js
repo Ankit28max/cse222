@@ -29,6 +29,6 @@ app.get("/set/:mode", (req, res) => {
     res.redirect("/");
 });
 
-app.listen(3000);
+app.listen(3000); 
 
 //fs.exists is a method that checks if a file exists or not. It returns a boolean value.
